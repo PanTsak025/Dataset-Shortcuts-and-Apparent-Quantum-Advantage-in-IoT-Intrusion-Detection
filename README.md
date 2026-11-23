@@ -109,7 +109,6 @@ python analyze_diagnostic.py       # diagnostic verdicts     -> results/diagnost
 ├── prepared/                               pools, evaluation sets, features, cleaning reports
 ├── results/                                pilot results; main/ and diagnostic/ per-run results
 │   └── main/curves/, diagnostic/curves/    loss after every COBYLA evaluation
-└── docs/DECISIONS.md                       every design choice, the rejected alternative and the evidence
 ```
 
 ## Reproducibility notes
@@ -123,7 +122,6 @@ python analyze_diagnostic.py       # diagnostic verdicts     -> results/diagnost
   test set was never used for a decision.
 - **Loss units.** qiskit-machine-learning computes cross-entropy with base-2 logarithms, so all stored
   losses are in bits; a uniform guess costs 1 bit (binary) or 3 bits (8-class).
-- **Changes after seeing results** are listed and justified in `docs/DECISIONS.md`.
 
 ## License
 
