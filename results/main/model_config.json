@@ -1,0 +1,228 @@
+{
+  "model": {
+    "ansatz": "efficient_su2",
+    "reps": 2,
+    "evals_per_parameter": 25
+  },
+  "stages": {
+    "learning_curves": {
+      "scenario": [
+        "DDoS",
+        "DoS",
+        "Mirai",
+        "Recon",
+        "Spoofing",
+        "BruteForce",
+        "Web",
+        "benign_vs_attack",
+        "multiclass"
+      ],
+      "n_train": [
+        25,
+        50,
+        100,
+        200,
+        400,
+        800
+      ],
+      "settings": {
+        "DDoS": [
+          2,
+          "mi"
+        ],
+        "DoS": [
+          2,
+          "mi"
+        ],
+        "Mirai": [
+          2,
+          "mi"
+        ],
+        "Recon": [
+          2,
+          "mi"
+        ],
+        "Spoofing": [
+          4,
+          "pca"
+        ],
+        "BruteForce": [
+          4,
+          "pca"
+        ],
+        "Web": [
+          6,
+          "pca"
+        ],
+        "benign_vs_attack": [
+          2,
+          "pca"
+        ],
+        "multiclass": [
+          4,
+          "pca"
+        ]
+      },
+      "sampling": [
+        "random",
+        "kmeans"
+      ],
+      "seed": [
+        0,
+        1,
+        2
+      ],
+      "feature_maps": [
+        "ry"
+      ]
+    },
+    "qubits_features": {
+      "scenario": [
+        "DDoS",
+        "DoS",
+        "Mirai",
+        "Recon",
+        "Spoofing",
+        "BruteForce",
+        "Web",
+        "benign_vs_attack",
+        "multiclass"
+      ],
+      "n_train": [
+        200
+      ],
+      "n_qubits": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "reducer": [
+        "pca",
+        "mi"
+      ],
+      "sampling": [
+        "random"
+      ],
+      "seed": [
+        0,
+        1,
+        2
+      ],
+      "feature_maps": [
+        "ry"
+      ]
+    },
+    "first_look": {
+      "scenario": [
+        "DDoS",
+        "DoS",
+        "Mirai",
+        "Recon",
+        "Spoofing",
+        "BruteForce",
+        "Web",
+        "benign_vs_attack",
+        "multiclass"
+      ],
+      "n_train": [
+        200
+      ],
+      "n_qubits": [
+        4
+      ],
+      "reducer": [
+        "pca"
+      ],
+      "sampling": [
+        "random"
+      ],
+      "seed": [
+        0,
+        1,
+        2
+      ],
+      "feature_maps": [
+        "ry",
+        "zz"
+      ]
+    },
+    "small_data": {
+      "scenario": [
+        "Recon",
+        "Spoofing",
+        "BruteForce",
+        "Web"
+      ],
+      "n_train": [
+        10,
+        25,
+        50
+      ],
+      "settings": {
+        "Recon": [
+          2,
+          "mi"
+        ],
+        "Spoofing": [
+          4,
+          "pca"
+        ],
+        "BruteForce": [
+          4,
+          "pca"
+        ],
+        "Web": [
+          6,
+          "pca"
+        ]
+      },
+      "sampling": [
+        "random"
+      ],
+      "seed": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "feature_maps": [
+        "ry"
+      ]
+    },
+    "smoke": {
+      "scenario": [
+        "Recon",
+        "multiclass"
+      ],
+      "n_train": [
+        10
+      ],
+      "n_qubits": [
+        4
+      ],
+      "reducer": [
+        "pca",
+        "mi"
+      ],
+      "sampling": [
+        "random",
+        "kmeans"
+      ],
+      "seed": [
+        0
+      ],
+      "feature_maps": [
+        "ry",
+        "zz"
+      ]
+    }
+  },
+  "n_val_per_class": 500
+}
